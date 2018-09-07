@@ -26,7 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn config set "@fortawesome:registry" https://npm.fontawesome.com/ && yarn config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
+      - run: npm config set "@fortawesome:registry" https://npm.fontawesome.com/ && npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
 
       - run: yarn install
 
@@ -67,7 +67,7 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy-dev:
+      - deploy-develop:
           requires:
             - build
           filters:
