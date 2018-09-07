@@ -57,7 +57,7 @@ jobs:
           command: sudo apt-get -y -qq install awscli
       - run:
           name: Deploy develop to S3
-          command: aws s3 sync public s3://dev.codemoth.fi --delete
+          command: aws s3 sync public s3://dev.codemoth.fi --delete --region eu-central-1
 
 workflows:
   version: 2
