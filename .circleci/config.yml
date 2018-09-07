@@ -56,6 +56,9 @@ jobs:
           name: Install awscli
           command: sudo apt-get -y -qq install awscli
       - run:
+          name: Changing authorization version 4 for AWS
+          command: aws configure set default.s3.signature_version s3v4
+      - run:
           name: Deploy develop to S3
           command: aws s3 sync public s3://dev.codemoth.fi --delete --region eu-central-1
 
