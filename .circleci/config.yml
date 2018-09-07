@@ -45,7 +45,7 @@ jobs:
     steps:
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: pip install awscli
       - run:
           name: Deploy develop to S3
           command: aws s3 sync public s3://dev.codemoth.io --delete
@@ -57,7 +57,7 @@ jobs:
     steps:
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: pip install awscli
       - run:
           name: Deploy master to S3
           command: aws s3 sync public/ s3://codemoth.fi --delete
