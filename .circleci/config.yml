@@ -28,50 +28,39 @@ jobs:
 
       - run: npm config set "@fortawesome:registry" https://npm.fontawesome.com/ && npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
       - run: yarn install
-      - run: yarn build
-
+      
       - save_cache:
           paths:
             - node_modules
           key: v2-dependencies-{{ checksum "package.json" }}
 
-      - save_cache:
-          paths:
-            - public
-          key: v2-build
-      
+      - store_artifacts:
+          path: /public      
         
       # run tests!
       # - run: yarn test
 
   deploy-develop:
     docker:
-      - image: circleci/python:2.7-jessie
+      - image: circleci/node:9
     working_directory: ~/repo
     steps:
-      - checkout 
+      - checkout
+
       - restore_cache:
           keys:
-          - v2-build
+          - v2-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v2-dependencies-
+
+      - run: yarn build
+
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: sudo apt-get -y -qq install awscli
       - run:
           name: Deploy develop to S3
           command: aws s3 sync public s3://dev.codemoth.fi --delete
-
-  deploy-master:
-    docker:
-      - image: circleci/python:2.7-jessie
-
-    working_directory: ~/repo
-    steps:
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - run:
-          name: Deploy master to S3
-          command: aws s3 sync public/ s3://codemoth.fi --delete
 
 workflows:
   version: 2
@@ -84,9 +73,3 @@ workflows:
           filters:
             branches:
               only: develop
-      - deploy-master:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
