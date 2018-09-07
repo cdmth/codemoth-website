@@ -33,9 +33,6 @@ jobs:
           paths:
             - node_modules
           key: v2-dependencies-{{ checksum "package.json" }}
-
-      - store_artifacts:
-          path: /public      
         
       # run tests!
       # - run: yarn test
