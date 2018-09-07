@@ -2,10 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStroopwafel} from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
+import '@fortawesome/fontawesome-pro/js/all.js'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
