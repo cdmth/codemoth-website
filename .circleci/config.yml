@@ -40,24 +40,24 @@ jobs:
 
   deploy-develop:
     docker:
-      - image: circleci/node:9
+      - image: circleci/python:2.7-jessie
     working_directory: ~/repo
     steps:
       - run:
           name: Install awscli
-          command: pip install awscli
+          command: sudo pip install awscli
       - run:
           name: Deploy develop to S3
           command: aws s3 sync public s3://dev.codemoth.io --delete
 
   deploy-master:
     docker:
-      - image: circleci/node:9
+      - image: circleci/python:2.7-jessie
     working_directory: ~/repo
     steps:
       - run:
           name: Install awscli
-          command: pip install awscli
+          command: sudo pip install awscli
       - run:
           name: Deploy master to S3
           command: aws s3 sync public/ s3://codemoth.fi --delete
