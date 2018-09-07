@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "codemoth-website",
+  "description": "Codemoth Coding Company Website",
   "version": "1.0.0",
   "author": "Codemoth <codemoth@gmail.com>",
   "dependencies": {
