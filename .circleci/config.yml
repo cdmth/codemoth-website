@@ -38,7 +38,7 @@ jobs:
       - save_cache:
           paths:
             - public
-          key: v2-build-{{ checksum "chunk-manifest.json" }}
+          key: v2-build-{{ checksum "public/chunk-manifest.json" }}
       
         
       # run tests!
@@ -52,7 +52,7 @@ jobs:
       - checkout 
       - restore_cache:
           keys:
-          - v2-build-{{ checksum "chunk-manifest.json" }}
+          - v2-build-{{ checksum "public/chunk-manifest.json" }}
           # fallback to using the latest cache if no exact match is found
           - v2-build-
       - run:
