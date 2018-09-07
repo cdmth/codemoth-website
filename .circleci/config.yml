@@ -35,3 +35,45 @@ jobs:
         
       # run tests!
       # - run: yarn test
+
+  deploy-develop:
+    docker:
+      - image: circleci/node:9
+    working_directory: ~/repo
+    steps:
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Deploy develop to S3
+          command: aws s3 sync public s3://dev.codemoth.io --delete
+
+  deploy-master:
+    docker:
+      - image: circleci/node:9
+    working_directory: ~/repo
+    steps:
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Deploy master to S3
+          command: aws s3 sync public/ s3://codemoth.fi --delete
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy-dev:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+      - deploy-master:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
