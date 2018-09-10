@@ -26,10 +26,10 @@ const IndexPage = () => (
                 <p className="title is-size-4">
                   UX
                 </p>
-                <p className="subtitle">
+                <p className="subtitle has-text-grey">
                   Käytettävyyssuunnittelu
                 </p>
-                <span className="card-icon">
+                <span className="card-icon has-text-danger">
                   <i className="far fa-braille fa-4x"></i>
                 </span>
               </div>
@@ -41,10 +41,10 @@ const IndexPage = () => (
                 <p className="title is-size-4">
                   UI
                 </p>
-                <p className="subtitle">
+                <p className="subtitle has-text-grey	">
                   Käyttöliittymäsuunnittelu
                 </p>
-                <span className="card-icon">
+                <span className="card-icon has-text-danger">
                   <i className="far fa-id-card fa-4x"></i>
                 </span>
               </div>
@@ -56,10 +56,10 @@ const IndexPage = () => (
                 <p className="title is-size-4">
                   Frontend
                 </p>
-                <p className="subtitle">
+                <p className="subtitle has-text-grey	">
                   Web-kehitys
                 </p>
-                <span className="card-icon">
+                <span className="card-icon has-text-danger">
                   <i className="far fa-browser fa-4x"></i>
                 </span>
               </div>
@@ -71,10 +71,10 @@ const IndexPage = () => (
                 <p className="title is-size-4">
                   Backend
                 </p>
-                <p className="subtitle">
+                <p className="subtitle has-text-grey	">
                   Sovelluskehitys
                 </p>
-                <span className="card-icon">
+                <span className="card-icon has-text-danger">
                   <i className="far fa-rocket fa-4x"></i>
                 </span>
               </div>
