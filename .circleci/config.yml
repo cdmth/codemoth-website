@@ -49,6 +49,30 @@ jobs:
           name: Deploy develop to S3
           command: aws s3 sync public s3://dev.codemoth.fi --delete --region eu-central-1
 
+  deploy-master:
+    docker:
+      - image: circleci/node:9
+    working_directory: ~/repo
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v2-dependencies-{{ checksum "package.json" }}
+          - v2-dependencies-
+
+      - run: yarn build
+
+      - run:
+          name: Install awscli
+          command: sudo apt-get -y -qq install awscli
+      - run:
+          name: Changing authorization version 4 for AWS
+          command: aws configure set default.s3.signature_version s3v4
+      - run:
+          name: Deploy develop to S3
+          command: aws s3 sync public s3://codemoth.fi --delete --region eu-central-1
+
 workflows:
   version: 2
   build-deploy:
@@ -60,3 +84,9 @@ workflows:
           filters:
             branches:
               only: develop
+      - deploy-master:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
