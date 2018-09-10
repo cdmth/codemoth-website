@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-pro/js/all.js'
 import Landing from '../components/landing'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Contact from '../pages/contact'
 import './index.scss'
 
 const Layout = ({ children, data }) => (
@@ -22,10 +23,11 @@ const Layout = ({ children, data }) => (
         ]}
       />
       <Landing />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div>
         {children()}
       </div>
+      <Contact />
       <Footer siteTitle={data.site.siteMetadata.title} />
     </div>
   </ParallaxProvider>

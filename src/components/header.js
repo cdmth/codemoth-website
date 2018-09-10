@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Header = ({ siteTitle }) => (
-  <nav className="navbar is-fixed-top">
+  <nav className="navbar is-dark is-fixed-top">
     <div className="navbar-burger burger" data-target="navbar-links">
       <span></span>
       <span></span>
