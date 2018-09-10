@@ -1,1 +1,13 @@
-@import "~bulma/bulma"
+@import "~bulma/bulma";
+
+.icon {
+  width: 2.5rem;
+}
+
+#navbar-items {
+  margin: 0 auto;
+}
+
+.card-icon {
+  display: block;
+}
