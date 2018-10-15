@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import lines from '../images/lines.svg'
 
 const SecondPage = () => (
-  <section className="hero is-fullheight is-info">
+  <section className="hero is-fullheight" style={{backgroundImage: `url(${lines})`, backgroundColor: "#3c5566", backgroundSize: "4%"}}>
     <div className="hero-body is-centered">
       <div className="container is-fluid">
 

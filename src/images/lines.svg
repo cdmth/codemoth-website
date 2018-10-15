@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,20 L20,0" id="Path" stroke="#4D6475"></path>
+        <path d="M0,40 L40,0" id="Path-2" stroke="#4D6475"></path>
+        <path d="M0,60 L60,0" id="Path-3" stroke="#4D6475"></path>
+        <path d="M0,80 L80,0" id="Path-4" stroke="#4D6475"></path>
+        <path d="M0,100 L100,0" id="Path-5" stroke="#4D6475"></path>
+        <path d="M20,100 L100,20" id="Path-6" stroke="#4D6475"></path>
+        <path d="M40,100 L100,40" id="Path-7" stroke="#4D6475"></path>
+        <path d="M60,100 L100,60" id="Path-8" stroke="#4D6475"></path>
+        <path d="M80,100 L100,80" id="Path-9" stroke="#4D6475"></path>
+    </g>
+</svg>
