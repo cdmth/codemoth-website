@@ -10,6 +10,8 @@ import Landing from '../components/landing'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Contact from '../pages/contact'
+import Message from '../pages/message'
+import Goodguys from '../pages/goodguys'
 import './index.scss'
 
 const Layout = ({ children, data }) => (
@@ -23,9 +25,11 @@ const Layout = ({ children, data }) => (
         ]}
       />
       <Landing />
+      <Message />
       <div>
         {children()}
       </div>
+      <Goodguys />
       <Contact />
       <Footer siteTitle={data.site.siteMetadata.title} />
     </div>

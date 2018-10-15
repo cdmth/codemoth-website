@@ -13,7 +13,8 @@
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
     "react-helmet": "^5.2.0",
-    "react-scroll-parallax": "^1.3.5"
+    "react-scroll-parallax": "^1.3.5",
+    "react-typing-animation": "^1.4.0"
   },
   "keywords": [
     "gatsby"

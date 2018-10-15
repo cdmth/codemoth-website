@@ -23,3 +23,50 @@
   border-radius: 10px;
   padding: 30px;
 }
+
+.card-title {
+  text-shadow: 2px 2px 0px rgba(195, 191, 98, 1);
+  -webkit-text-stroke: 2px #3c5566;
+  color: #e9eee3;
+  font-family: "Tahoma"
+}
+
+.ukkeli {
+  color: rgba(195, 191, 98, 1);
+}
+
+.dadada-ukkeli {
+  color: #dadada
+}
+
+// .message-text {
+//   color: #790fb7;
+//   font-family: "Courier", "Monaco", "Tahoma";
+//   font-size: 2em;
+//   font-weight: bold;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   width: 30em;
+//   animation: type 3s steps(60, end); 
+// }
+
+.message-text {
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+}
+
+#LeftDisplay {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 50%;
+  margin-top: 5%;
+}
+
+#RightDisplay {
+  position: absolute;
+  display: block;
+  right: 0;
+  width: 50%;
+  margin-top: 20%;
+}

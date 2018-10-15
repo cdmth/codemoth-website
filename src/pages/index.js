@@ -1,89 +1,118 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import screens from '../images/screens.svg'
+import { Parallax } from 'react-scroll-parallax';
+import LeftDisplay from '../images/leftdisplay.svg'
+import RightDisplay from '../images/rightdisplay.svg'
 
 const IndexPage = () => (
-  <section className="hero is-fullheight">
-    <div className="hero-body is-centered">
-      <div className="container is-fluid">
-        <div className="tile is-ancestor">
-          <div className="tile service-tile is-vertical is-8">
-            <div className="tile is-parent">
-              <article className="tile is-child notification is-danger">
-                <p className="title">Palvelut</p>
-                <p className="subtitle">Ei välikäsiä.</p>
-                <div className="content">
-                  Monesti tekijän löytäminen on hankalaa. On puitesopimuksia, kokonaisia tiimejä, turhia käsienheiluttelijoita. Tarjoamme työhön tekijän, emme mitään ylimääräistä. 
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+  <section className="hero is-fullheight" style={{backgroundRepeat: "no-repeat", backgroundColor: "#81D4FA"}}>
+    <Parallax
+      className="custom-class"
+      offsetXMax={-10}
+      offsetXMin={5}
+      slowerScrollRate
+      tag="figure"
+    >
+      <img id="LeftDisplay" src={LeftDisplay} />
+    </Parallax>
 
-        <div className="columns">
+    <Parallax
+      className="custom-class"
+      offsetXMax={10}
+      offsetXMin={-5}
+      slowerScrollRate
+      tag="figure"
+    >
+    <img id="RightDisplay" src={RightDisplay} />
+    </Parallax>
+
+    <div className="hero-body is-centered">
+      <div className="container box" style={{maxWidth: "700px", backgroundColor: "#FFF"}}>
           <div className="column">
-            <div className="card">
               <div className="card-content has-text-centered">
                 <p className="title is-size-4">
-                  UX
+                  UX - UI
                 </p>
                 <p className="subtitle has-text-grey">
-                  Käytettävyyssuunnittelu
+                  Käytettävyys- ja käyttöliittymäsuunnittelu
                 </p>
-                <span className="card-icon has-text-danger">
-                  <i className="far fa-braille fa-4x"></i>
+                <span className="card-icon">
+                  <i className="far fa-id-card  fa-4x"></i>
                 </span>
-              </div>
             </div>
           </div>
           <div className="column">
-            <div className="card">
               <div className="card-content has-text-centered">
                 <p className="title is-size-4">
-                  UI
+                  Frontend - Backend
                 </p>
                 <p className="subtitle has-text-grey	">
-                  Käyttöliittymäsuunnittelu
+                  Web- ja sovelluskehitys tarpeesi mukaan
                 </p>
-                <span className="card-icon has-text-danger">
-                  <i className="far fa-id-card fa-4x"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="column">
-            <div className="card">
-              <div className="card-content has-text-centered">
-                <p className="title is-size-4">
-                  Frontend
-                </p>
-                <p className="subtitle has-text-grey	">
-                  Web-kehitys
-                </p>
-                <span className="card-icon has-text-danger">
+                <span className="card-icon">
                   <i className="far fa-browser fa-4x"></i>
                 </span>
-              </div>
             </div>
           </div>
+
           <div className="column">
-            <div className="card">
               <div className="card-content has-text-centered">
                 <p className="title is-size-4">
-                  Backend
+                Digitaalisien palveluiden kehitys
                 </p>
                 <p className="subtitle has-text-grey	">
-                  Sovelluskehitys
+                  Toteutamme yhdessä ideasi
                 </p>
-                <span className="card-icon has-text-danger">
+                <span className="card-icon">
                   <i className="far fa-rocket fa-4x"></i>
                 </span>
-              </div>
             </div>
           </div>
-        </div>
+
+          <div className="column">
+              <div className="card-content has-text-centered">
+                <p className="title is-size-4">
+                  Palveluliiketoiminnan kehittäminen ja palvelumuotoilu
+                </p>
+                <p className="subtitle has-text-grey	">
+                  Konseptoinnista toteutukseen
+                </p>
+                <span className="card-icon">
+                  <i className="far fa-compass fa-4x"></i>
+                </span>
+            </div>
+          </div>
+
+          <div className="column">
+              <div className="card-content has-text-centered">
+                <p className="title is-size-4">
+                  Pilvipalveluiden suunnittelu ja käyttö
+                </p>
+                <p className="subtitle has-text-grey	">
+                  Siirry helposti pilveen. Anna meidän nykyaikaistaa devops-putkesi
+                </p>
+                <span className="card-icon">
+                  <i className="far fa-cloud fa-4x"></i>
+                </span>
+            </div>
+          </div>
+
+          <div className="column">
+              <div className="card-content has-text-centered">
+                <p className="title is-size-4">
+                  Testauspalvelut
+                </p>
+                <p className="subtitle has-text-grey	">
+                  Onko yrityksesi yksikkö-, integrointi-, end-to-end- tai robotiikkatestaukset on toteutettu?
+                </p>
+                <span className="card-icon">
+                  <i className="far fa-check-circle fa-4x"></i>
+                </span>
+            </div>
+          </div>
       </div>
     </div>
-
   </section>
 )
 
