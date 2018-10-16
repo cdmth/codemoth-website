@@ -30,7 +30,7 @@ const Layout = ({ children, data }) => (
           { name: 'og:url', content: 'http://codemoth.fi' },
           { name: 'twitter:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
           { name: 'twitter:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
-          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:card', content: 'summary' },
           { name: 'twitter:url', content: 'https://codemoth.fi' },
         ]}
       />
