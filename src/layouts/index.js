@@ -25,7 +25,7 @@ const Layout = ({ children, data }) => (
           { name: 'keywords', content: 'frontend, backend, ui, ux' },
           { name: 'og:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
           { name: 'og:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
-          { name: 'og:keywords', content: 'frontend, backend, ui, ux' },
+          { name: 'og:title', content: 'Codemoth Coding Agency' },
           { name: 'og:type', content: 'website' },
           { name: 'og:url', content: 'http://codemoth.fi' },
           { name: 'twitter:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
