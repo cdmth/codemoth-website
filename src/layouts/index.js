@@ -20,10 +20,18 @@ const Layout = ({ children, data }) => (
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Codemoth.fi' },
+          { name: 'description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
           { name: 'image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
           { name: 'keywords', content: 'frontend, backend, ui, ux' },
-          { name: 'url', content: 'https://codemoth.fi' },
+          { name: 'og:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
+          { name: 'og:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
+          { name: 'og:keywords', content: 'frontend, backend, ui, ux' },
+          { name: 'og:type', content: 'website' },
+          { name: 'og:url', content: 'http://codemoth.fi' },
+          { name: 'twitter:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
+          { name: 'twitter:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:url', content: 'https://codemoth.fi' },
         ]}
       />
       <Landing />
