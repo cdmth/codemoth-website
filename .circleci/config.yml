@@ -47,7 +47,7 @@ jobs:
           command: aws configure set default.s3.signature_version s3v4
       - run:
           name: Deploy develop to S3
-          command: aws s3 sync public s3://dev.codemoth.fi --delete --region eu-central-1
+          command: aws s3 sync public s3://dev.codemoth.fi --delete --region eu-central-1 . --exclude "*shared/*"
 
   deploy-master:
     docker:
@@ -71,7 +71,7 @@ jobs:
           command: aws configure set default.s3.signature_version s3v4
       - run:
           name: Deploy develop to S3
-          command: aws s3 sync public s3://codemoth.fi --delete --region eu-central-1
+          command: aws s3 sync public s3://codemoth.fi --delete --region eu-central-1 . --exclude "*shared/*"
 
 workflows:
   version: 2
