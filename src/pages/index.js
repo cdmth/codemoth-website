@@ -7,27 +7,29 @@ import RightDisplay from '../images/rightdisplay.svg'
 
 const IndexPage = () => (
   <section className="hero is-fullheight" style={{backgroundRepeat: "no-repeat", backgroundColor: "#81D4FA"}}>
-    <Parallax
-      className="custom-class"
-      offsetXMax={-10}
-      offsetXMin={5}
-      slowerScrollRate
-      tag="figure"
-    >
-      <img id="LeftDisplay" src={LeftDisplay} />
-    </Parallax>
+    <div className="display-wrappers">
+      <Parallax
+        className="custom-class"
+        offsetXMax={-30}
+        offsetXMin={5}
+        slowerScrollRate
+        tag="figure"
+      >
+        <img id="LeftDisplay" src={LeftDisplay} />
+      </Parallax>
 
-    <Parallax
-      className="custom-class"
-      offsetXMax={10}
-      offsetXMin={-5}
-      slowerScrollRate
-      tag="figure"
-    >
-    <img id="RightDisplay" src={RightDisplay} />
-    </Parallax>
+      <Parallax
+        className="custom-class"
+        offsetXMax={10}
+        offsetXMin={-5}
+        slowerScrollRate
+        tag="figure"
+      >
+        <img id="RightDisplay" src={RightDisplay} />
+      </Parallax>
+    </div>
 
-    <div className="hero-body is-centered">
+    <div className="hero-body is-centered services">
       <div className="container box" style={{maxWidth: "700px", backgroundColor: "#FFF"}}>
           <div className="column">
               <div className="card-content has-text-centered">

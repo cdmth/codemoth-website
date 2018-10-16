@@ -8,12 +8,12 @@ const Landing = () => (
       <div className="hero-body is-centered">
         <div className="has-text-centered" style={{margin: "0 auto"}}>
         <Parallax
-  className="custom-class"
-  offsetYMax={60}
-  offsetYMin={-60}
-  slowerScrollRate
-  tag="figure"
->
+          className="custom-class"
+          offsetYMax={60}
+          offsetYMin={-60}
+          slowerScrollRate
+          tag="figure"
+        >
           <div className="big-title-box" style={{backgroundColor: '#FFF'}}>
             <p className="title big-title">CODEMOTH</p>
           </div>

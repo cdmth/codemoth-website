@@ -21,7 +21,6 @@ const SecondPage = () => (
               <p>
                 Ilman sosiaalisia taitoja ei tästä hommasta tulisi yhtään mitään. 
                 Pystymme puhumaan tekniset asiat todella yksinkertaisesti.
-                Hei, kokeillaan löytyykö yhteinen sävel kanssasi?
               </p>
           </div>
         </div>
