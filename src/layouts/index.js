@@ -20,8 +20,10 @@ const Layout = ({ children, data }) => (
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: 'Codemoth.fi' },
+          { name: 'image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared_images/codemoth.png' },
+          { name: 'keywords', content: 'frontend, backend, ui, ux' },
+          { name: 'url', content: 'https://codemoth.fi' },
         ]}
       />
       <Landing />
