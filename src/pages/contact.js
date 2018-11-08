@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import lines from '../images/lines.svg'
+import { Follow } from 'react-twitter-widgets'
 
 const SecondPage = () => (
   <section className="hero is-fullheight contact-hero" style={{backgroundImage: `url(${lines})`, backgroundColor: "#3c5566", backgroundSize: "4%"}}>

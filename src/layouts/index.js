@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax'
+import FavIcon from '../images/favicon-32x32.png'
 
 import '@fortawesome/fontawesome-pro/js/all.js'
 
@@ -20,25 +21,45 @@ const Layout = ({ children, data }) => (
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
-          { name: 'image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
+          {
+            name: 'description',
+            content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.',
+          },
+          {
+            name: 'image',
+            content:
+              'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png',
+          },
           { name: 'keywords', content: 'frontend, backend, ui, ux' },
-          { name: 'og:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
-          { name: 'og:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
+          {
+            name: 'og:description',
+            content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.',
+          },
+          {
+            name: 'og:image',
+            content:
+              'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png',
+          },
           { name: 'og:title', content: 'Codemoth Coding Agency' },
           { name: 'og:type', content: 'website' },
           { name: 'og:url', content: 'http://codemoth.fi' },
-          { name: 'twitter:description', content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.' },
-          { name: 'twitter:image', content: 'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png' },
+          {
+            name: 'twitter:description',
+            content: 'Teemme ohjelmia ja koodia sinun tarpeisiin.',
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://s3.eu-central-1.amazonaws.com/codemoth.fi/shared/codemoth.png',
+          },
           { name: 'twitter:card', content: 'summary' },
           { name: 'twitter:url', content: 'https://codemoth.fi' },
         ]}
+        link={[{ rel: 'shortcut icon', type: 'image/png', href: `${FavIcon}` }]}
       />
       <Landing />
       <Message />
-      <div>
-        {children()}
-      </div>
+      <div>{children()}</div>
       <Goodguys />
       <Contact />
       <Footer siteTitle={data.site.siteMetadata.title} />
