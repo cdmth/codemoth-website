@@ -10,6 +10,7 @@ const Header = ({ siteTitle }) => (
           screenName: 'Codemoth'
         }}
         options={{
+          linkColor: '#44C2EA',
           username: 'Codemoth',
           width: '960'
         }}
